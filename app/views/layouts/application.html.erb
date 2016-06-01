@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FloriansSaas</title>
+  <title>Skill Match</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -18,9 +18,11 @@
         <span class="icon-bar"></span>
       </button>
       
-      <!-- Ruby link -->
-      <%= link_to 'SaaS', root_path, class: 'navbar-brand' %>
-    
+      <%= link_to root_path, class: 'navbar-brand' do %>
+          <i class="fa fa-user-plus"></i>
+            Skill Match
+      <% end %>
+      
     </div>
     
     <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -30,6 +32,7 @@
     </div> <!-- .navbar-collapse -->
   </div>
 </nav>
+
 <div class="container">
   <%= yield %>
 </div>
