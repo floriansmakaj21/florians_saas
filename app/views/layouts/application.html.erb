@@ -33,9 +33,17 @@
     </div> <!-- .navbar-collapse -->
   </div>
 </nav>
+  
 
 <div class="container">
-  <%= yield %>
+    
+    <!-- Flash Div, allows to display the messages of contacts_controll.rb-->
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
+  
+    <!-- Display the pages content, from the layout-> pages / contacts/new etc -->
+    <%= yield %>
 </div>
 
 </body>
